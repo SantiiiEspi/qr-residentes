@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>QR Residente</title>
+</head>
+<body>
+    <h1>Generador de QR para residente</h1>
+    <form method="post">
+        <label>Nombre del residente:</label><br>
+        <input type="text" name="nombre"><br><br>
+        <label>Dirección del residente:</label><br>
+        <input type="text" name="direccion"><br><br>
+        <input type="submit" value="Crear QR">
+    </form>
+
+    {% if qr_code %}
+        <h2>QR generado:</h2>
+        <img src="{{ qr_code }}" alt="Código QR">
+    {% endif %}
+</body>
+</html>
