@@ -10,12 +10,13 @@ def index():
     qr_base64 = None
 
     if request.method == 'POST':
-        nombre = request.form.get('nombre')
-        direccion = request.form.get('direccion')
+    nombre = request.form.get('nombre')
+    direccion = request.form.get('direccion')
+    visitante = request.form.get('visitante') 
 
-        if nombre and direccion:
-            data = f"Nombre: {nombre}\nDirección: {direccion}"
-            img = qrcode.make(data)
+    if nombre and direccion and visitante:
+        data = f"Nombre residente: {nombre}\nDirección: {direccion}\nNombre visitante: {visitante}"
+        img = qrcode.make(data)
 
             # Convertir imagen a base64
             buffer = io.BytesIO()
