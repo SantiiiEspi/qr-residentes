@@ -6,14 +6,22 @@
 <body>
     <h1>Generador de QR para residente</h1>
     <form method="post">
-        <label>Nombre del residente:</label><br>
-        <input type="text" name="nombre"><br><br>
+
         <div>
-  <label for="visitante">Nombre del visitante:</label>
-  <input type="text" id="visitante" name="visitante" required>
-</div>
-        <label>Dirección del residente:</label><br>
-        <input type="text" name="direccion"><br><br>
+            <label for="nombre">Nombre del residente:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+        </div>
+
+        <div>
+            <label for="visitante">Nombre del visitante:</label><br>
+            <input type="text" id="visitante" name="visitante" required><br><br>
+        </div>
+
+        <div>
+            <label for="direccion">Dirección del residente:</label><br>
+            <input type="text" id="direccion" name="direccion" required><br><br>
+        </div>
+
         <input type="submit" value="Crear QR">
     </form>
 
